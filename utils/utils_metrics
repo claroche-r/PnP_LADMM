@@ -1,0 +1,35 @@
+import torch
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+from torchmetrics import PeakSignalNoiseRatio, StructuralSimilarityIndexMeasure
+from torchmetrics.image.lpip import LearnedPerceptualImagePatchSimilarity
+
+def plot_mse_iter(x_list, time_list, ref, color="blue", legend=''):
+    l = []
+    ref = ref[:,:,17:-17, 17:-17]
+    
+    for x,t in zip(x_list, time_list):
+        x_crop = x[:,:,17:-17, 17:-17].cpu()
+        l.append(((ref - x_crop)**2).mean())
+        
+    plt.plot(np.cumsum(time_list), l, color=color, label=legend)
+    plt.xlabel('Time in sec')
+    plt.ylabel('MSE')
+    plt.legend()
+    
+def get_metrics(est_list, ref, border=17):
+    psnr_list, ssim_list, lpips_list = [], [], []
+    psnr = PeakSignalNoiseRatio(data_range=1).to('cuda')
+    ssim = StructuralSimilarityIndexMeasure().to('cuda')
+    lpips = LearnedPerceptualImagePatchSimilarity(net_type='vgg').to('cuda')
+    #lpips.net = lpips.net.to('cuda')
+    ref = ref.to('cuda')[...,border:-border,border:-border]
+    for est in est_list:
+        est = est.to('cuda').clamp(0,1)[...,border:-border,border:-border]
+        psnr_list.append(psnr(ref, est).cpu().item())
+        ssim_list.append(ssim(ref, est).cpu().item())
+        lpips_list.append(lpips(ref,est).cpu().item())
+        
+    return psnr_list, ssim_list, lpips_lists
