@@ -1,0 +1,5 @@
+# Jekyll config
+
+name: Plug-and-Play linearized ADMM
+url: https://claroche-r.github.io/PnP_LADMM
+markdown: kramdown
