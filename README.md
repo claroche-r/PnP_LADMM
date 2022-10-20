@@ -1,5 +1,6 @@
-# PnP_LADMM
+# Plug & Play linearized ADMM
 
+<a href="https://arxiv.org/abs/2210.10605" target="_blank" rel="noopener"><img src="docs/logos/arxiv.png" height=30 alt="Download"></a>  
 [Website of the project](https://claroche-r.github.io/PnP_LADMM/) 
 
 ## Introduction
@@ -38,4 +39,16 @@ Plug & Play methods combine proximal algorithms with denoiser priors to solve in
 
 ## Acknowledgement
 This code use the backbone of [KAIR repository](https://github.com/cszn/KAIR).
+
+## Citation
+
+```
+@article{laroche2022pnpladmm,
+  title = {Provably Convergent Plug \& Play Linearized ADMM, applied to Deblurring Spatially Varying Kernels},
+  author = {Laroche, Charles and Almansa, Andrés and Coupeté, Eva and Tassano, Matias},
+  publisher = {arXiv},
+  year = {2022}
+}
+```
+
 
