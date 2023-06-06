@@ -57,6 +57,12 @@ See ```tuto_pnp.py``` for a working example on how to use our code.
             margin-left: 100px" 
     />
     
+
+## Unfolded architecture
+
+If you are interested in faster runtime and better restoration quality, check our unfolded version of Plug & Play linearized-ADMM  called [DMBSR](https://github.com/claroche-r/DMBSR).
+
+
 ## Acknowledgement
 This code use the backbone of [KAIR repository](https://github.com/cszn/KAIR).
 
