@@ -1,7 +1,6 @@
 # Plug & Play linearized ADMM
 
 <a href="https://arxiv.org/abs/2210.10605" target="_blank" rel="noopener"><img src="docs/logos/arxiv.png" height=30 alt="Download"></a>  
-[Website of the project](https://claroche-r.github.io/PnP_LADMM/) 
 
 ## Introduction
 This repository implements the code used for our paper **Provably Convergent Plug & Play Linearized ADMM, applied to Deblurring Spatially Varying Kernels**. This is joint work with **Andrés Almansa**, **Eva Coupeté** and **Matias Tassano**.
