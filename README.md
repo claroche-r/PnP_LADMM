@@ -68,12 +68,11 @@ This code use the backbone of [KAIR repository](https://github.com/cszn/KAIR).
 ## Citation
 
 ```
-@article{laroche2022pnpladmm,
-  title = {Provably Convergent Plug \& Play Linearized ADMM, applied to Deblurring Spatially Varying Kernels},
-  author = {Laroche, Charles and Almansa, Andrés and Coupeté, Eva and Tassano, Matias},
-  publisher = {arXiv},
-  year = {2022}
-}
+@INPROCEEDINGS{laroche2023pnpladmm,
+  author={Laroche, Charles and Almansa, Andrés and Coupeté, Eva and Tassano, Matias},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Provably Convergent Plug & Play Linearized ADMM, Applied to Deblurring Spatially Varying Kernels}, 
+  year={2023}}
 ```
 
 
